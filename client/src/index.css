@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  scrollbar-width: thin; /* Options: auto, thin */
+  scrollbar-color: var(--secondary) var(--primary); /* thumb color, track color */
+}
+
+/* WebKit browsers */
+*::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary); /* Background of the track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+
+:root {
+  --primary:#0a0708 ; /* Track color */
+  --secondary: #831843;/* Thumb color */
+}
