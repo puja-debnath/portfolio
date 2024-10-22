@@ -21,7 +21,7 @@ const Experience = () => {
                 className={`text-xl px-5  ${
                   selectedItemIndex === index
                     ? "text-tertiary border-tertiary border-l-4 sm:w-1/3 bg-pink-700 p-3 rounded-md"
-                    : "text-white"
+                    : ""
                 }`}
               >
                 {experience.name}
