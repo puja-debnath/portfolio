@@ -4,13 +4,13 @@ import { Projects } from "../../resources/Projects.jsx";
 
 const Project = () => {
   const [selectedItem, setselectedItem] = useState(null);
-  const images = ["image1", "image2", "image3"];
+
   return (
-    <div className="bg-primary px-20">
+    <div className="bg-primary px-20 sm:px-10 h-screen ">
       <SectionTitle title="Projects" />
-      <div className="flex sm:flex-col w-full   ">
-        <div className="  text-xl w-1/3">
-          <div className=" flex flex-col gap-5 border-l-4 border-pink-900  ">
+      <div className="flex sm:flex-col w-full sm:gap-10  sm:flex-wrap  ">
+        <div className="  text-xl w-1/3 sm:w-full">
+          <div className=" flex flex-col gap-5 border-l-4 border-secondary ">
             {Projects.map((project, index) => (
               <div
                 className="cursor-pointer "
@@ -19,7 +19,7 @@ const Project = () => {
                 <h1
                   className={`text-xl px-5${
                     selectedItem === index
-                      ? "text-tertiary border-l-4 bg-pink-700 rounded-md p-3 w-2/3  "
+                      ? "text-secondary border-l-4 bg-secondary rounded-md p-3 w-2/3 sm:w-full  "
                       : " "
                   }`}
                 >
@@ -30,34 +30,44 @@ const Project = () => {
           </div>
         </div>
 
-        <div className=" w-2/3 pl-10 ">
-          <h1 className="flex flex-col">
+        <div className=" w-2/3 pl-10 sm:w-full  ">
+          <h1 className="flex flex-col  ">
             {selectedItem !== null ? (
               <>
-                <div className=" w-full flex">
+                <div className=" w-full flex sm:flex-col">
                   <img
                     src={Projects[selectedItem].image}
                     alt=""
-                    className="h-[40vh] w-1/2"
+                    className="h-[40vh] w-1/2 rounded-md sm:w-full"
                   ></img>
+                  <div className="px-5 p-5">
+                    <span className="text-blue-700 text-2xl text-bold p-5">
+                      Technologies used
+                    </span>
+                    <o1 className=" flex flex-col gap-4 px-10 text-xl">
+                      {Projects[selectedItem].technologies.map(
+                        (TECH, index) => (
+                          <li key={index}>{TECH}</li>
+                        )
+                      )}
+                    </o1>
+                  </div>
+                </div>
 
-                  <span className=" w-1/2 flex flex-col gap-10 ">
-                    {Projects[selectedItem].technologies.map((TECH) => (
-                      <h1>{TECH}</h1>
-                    ))}
+                <div className="flex">
+                  <span className="p-5 text-semibold">
+                    {Projects[selectedItem].algorithms ? (
+                      <o1 className=" text-xl text-semibold gap-3 ">
+                        <span className="text-blue-950 text-2xl">Algorithms used</span>
+                        {Projects[selectedItem].algorithms.map((tech) => (
+                          <li>{tech}</li>
+                        ))}
+                      </o1>
+                    ) : null}
                   </span>
                 </div>
 
-                <span className="p-5 text-semibold">
-                  {Projects[selectedItem].algorithms ? (
-                    <h1 className=" text-2xl text-semibold">
-                      {Projects[selectedItem].algorithms.map((tech) => (
-                        <h1>{tech}</h1>
-                      ))}
-                    </h1>
-                  ) : null}
-                </span>
-                <span className="py-3">
+                <span className="py-3 px-10 ">
                   {Projects[selectedItem].description}
                 </span>
                 <a

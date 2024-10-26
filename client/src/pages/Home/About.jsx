@@ -12,13 +12,13 @@ const About = () => {
     "",
   ];
   return (
-    <div className="bg-primary">
+    <div className="bg-primary px-20">
       <SectionTitle title="About" />
       <div className="flex w-full items-center sm:flex-col gap-6">
         <div className="h-[50vh] p-20 bg-green-400 w-1/2">
           //for photo animation
         </div>
-        <div className="flex flex-col gap-6 pr-20 w-1/2 sm:w-full sm:pl-5 sm:pr-0 font-serif ">
+        <div className="flex flex-col gap-10 pr-20 w-1/2 sm:w-full sm:pl-5 sm:pr-0 font-serif ">
           <p className=" ">
             From a young age, I’ve always been fascinated by technology and how
             it shapes our world. My journey into software development began with
@@ -44,12 +44,12 @@ const About = () => {
       </div>
 
       <div className="py-10 pl-20 sm:pl-5 items-start sm:flex-col ">
-        <h1 className="text-secondary text-2xl sm:items-start">
+        <h1 className="text-secondary text-2xl sm:items-start gap-5">
           Here are a few technologies that i have been working on{" "}
         </h1>
         <div className="flex gap-10 sm:py-5 sm:gap-5 flex-wrap mt-5">
         {skills.map((skill, index) => (
-          <div className="bg-pink-800 hover:bg-pink-600 text-gray-800 font-bold py-2 px-4 rounded-lg">
+          <div className="bg-blue-800 hover:bg-blue-600 text-gray-800 font-bold py-2 px-4 rounded-lg">
             <h1>{skill}</h1>
           </div>
         ))}

@@ -8,7 +8,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   scrollbar-width: thin; /* Options: auto, thin */
   scrollbar-color: var(--secondary) var(--primary); /* thumb color, track color */
@@ -28,8 +27,33 @@
   border-radius: 10px; /* Rounded corners for the thumb */
 }
 
-
 :root {
-  --primary:#0a0708 ; /* Track color */
-  --secondary: #831843;/* Thumb color */
+  --primary: #0a0708; /* Track color */
+  --secondary: #831843; /* Thumb color */
+}
+
+.puja {
+  animation: puja 1s infinite;
+}
+
+@keyframes puja {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.debnath {
+  animation: debnath 1s infinite;
+}
+
+@keyframes debnath {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

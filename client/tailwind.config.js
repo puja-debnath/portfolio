@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        "primary" : "#C75B7A",   // light pink
-        "secondary":"#6b0f8d",  // dark pink
-        "tertiary" : "#D9ABAB"   // cream
+        "primary" : "#E2BBE9",   // light pink
+        "secondary":"#2F3C7E",  //  blue
+        "tertiary" : "#AF0171"   // cream
       }  
     },
     screens: {

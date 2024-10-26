@@ -9,14 +9,9 @@ import Footer from "../../components/Footer";
 const Home = () => {
   return (
     <div className="bg-primary">
-      <Header />
       <div className="px-40 sm:px-10">
         <Intro />
-        <About />
       </div>
-      <Experience />
-      <Project />
-      <Footer />
     </div>
   );
 };
