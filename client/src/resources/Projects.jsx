@@ -1,9 +1,9 @@
 import image1 from "../assets/pathfing.webp"
 import image2 from "../assets/sorting_merge.png";
 
-export const Projects = [
+export const Projects = 
+[
   {
-    id: "1",
     title: "Pathfinding Visualizer",
     image: image1,
     technologies: ["JavaScript", "React JS", "Tailwind CSS"],
@@ -13,7 +13,6 @@ export const Projects = [
     githublink: "https://github.com/puja-debnath/Pathfinding-Visualizer",
   },
   {
-    id: "2",
     title: "Visualization of Sorting Algorithms",
     image: image2,
     technologies: ["JavaScript", "React JS", "Tailwind CSS"],
@@ -23,7 +22,6 @@ export const Projects = [
     githublink: "https://github.com/puja-debnath/Visualization-of-Sorting-algo",
   },
   {
-    id: "3",
     title: "Password generator",
     image: "",
     technologies: ["Reactjs", "Tailwind CSS", "javascript"],
@@ -32,7 +30,6 @@ export const Projects = [
     githublink: "https://github.com/puja-debnath/password-Gen",
   },
   {
-    id: "4",
     title: "Personal Portfolio",
     image: "",
     technologies: ["javaScript", "React js", "Tailwind", "Node js", "MongoDB"],

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { Projects } from "../../resources/Projects.jsx";
+import { useSelector } from "react-redux";
 
 const Project = () => {
   const [selectedItem, setselectedItem] = useState(null);
+  const { portfolioData } = useSelector((state) => state.root);
+  const { projects } = portfolioData;
+
 
   return (
     <div className="bg-primary px-20 sm:px-10 h-screen ">
@@ -11,7 +14,7 @@ const Project = () => {
       <div className="flex sm:flex-col w-full sm:gap-10  sm:flex-wrap  ">
         <div className="  text-xl w-1/3 sm:w-full">
           <div className=" flex flex-col gap-5 border-l-4 border-secondary ">
-            {Projects.map((project, index) => (
+            {projects.map((project, index) => (
               <div
                 className="cursor-pointer "
                 onClick={() => setselectedItem(index)}
@@ -36,7 +39,7 @@ const Project = () => {
               <>
                 <div className=" w-full flex sm:flex-col">
                   <img
-                    src={Projects[selectedItem].image}
+                    src={projects[selectedItem].image}
                     alt=""
                     className="h-[40vh] w-1/2 rounded-md sm:w-full"
                   ></img>
@@ -45,7 +48,7 @@ const Project = () => {
                       Technologies used
                     </span>
                     <o1 className=" flex flex-col gap-4 px-10 text-xl">
-                      {Projects[selectedItem].technologies.map(
+                      {projects[selectedItem].technologies.map(
                         (TECH, index) => (
                           <li key={index}>{TECH}</li>
                         )
@@ -56,10 +59,10 @@ const Project = () => {
 
                 <div className="flex">
                   <span className="p-5 text-semibold">
-                    {Projects[selectedItem].algorithms ? (
+                    {projects[selectedItem].algorithms ? (
                       <o1 className=" text-xl text-semibold gap-3 ">
                         <span className="text-blue-950 text-2xl">Algorithms used</span>
-                        {Projects[selectedItem].algorithms.map((tech) => (
+                        {projects[selectedItem].algorithms.map((tech) => (
                           <li>{tech}</li>
                         ))}
                       </o1>
@@ -68,15 +71,15 @@ const Project = () => {
                 </div>
 
                 <span className="py-3 px-10 ">
-                  {Projects[selectedItem].description}
+                  {projects[selectedItem].description}
                 </span>
                 <a
                   className="py-3 text-black font-bold"
-                  href={Projects[selectedItem].githublink}
+                  href={projects[selectedItem].githublink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Github link :{Projects[selectedItem].githublink}
+                  Github link :{projects[selectedItem].githublink}
                 </a>
               </>
             ) : (

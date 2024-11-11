@@ -44,7 +44,7 @@ const LeftSide = () => {
             <FaTwitter className="mr-2" />
           </a>
           <a
-            href="https://github.com/puja-debnath"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500  mx-2 cursor-pointer hover:text-pink-900"

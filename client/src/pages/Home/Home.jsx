@@ -1,10 +1,6 @@
 import React from "react";
-import Header from "../../components/Header";
 import Intro from "./Intro";
-import About from "./About";
-import Experience from "./Experience";
-import Project from "./Project";
-import Footer from "../../components/Footer";
+
 
 const Home = () => {
   return (
